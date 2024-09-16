@@ -12,8 +12,8 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.fo",
+				"title": "fo"
 			}
 		]
 	},
