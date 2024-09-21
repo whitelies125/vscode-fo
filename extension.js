@@ -11,7 +11,7 @@ const vscode = require('vscode');
 function activate(context) {
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "helloworld-minimal-sample" is now active!');
+	//console.log('Congratulations, your extension "vscode-fo" is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
@@ -25,6 +25,7 @@ function activate(context) {
             placeHolder: 'Select a command'
         });
         if (!selectedCommand) {
+            vscode.window.showErrorMessage('no command selected');
             return
         }
         const filename = selectedCommand.file;
@@ -60,10 +61,10 @@ function activate(context) {
 // 生成候选命令列表
 function getCommandSuggestions() {
     const allCommands = [
-        { label: 'main', file: 'src/main.cpp', line : '5' },
-        { label: 'package', file: 'package.json', line: '10'},
-        { label: 'rrc resume', file: 'extension.command3', line: '1'},
-        { label: 'init context setup', file: 'extension.command3', line: '1'}
+        { label: 'main', file: 'src/main.cpp', line : 5 },
+        { label: 'package', file: 'package.json', line: 10},
+        { label: 'label3', file: 'filename3', line: 1},
+        { label: 'label4', file: 'filename4', line: 1}
     ];
 
     return allCommands;
